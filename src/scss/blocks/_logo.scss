@@ -1,0 +1,23 @@
+.logo, a.logo{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    font-family: var(--font-accent);
+    color: #000;
+
+    span{
+        color: #6C7275;
+    }
+
+    &--footer{
+        color: #fff;
+    }
+
+    @include mobile{
+        font-size: 16px;
+    }
+
+    &--mobile-nav{
+        font-size: 16px;
+    }
+}

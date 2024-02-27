@@ -1,0 +1,30 @@
+.dots{
+    display: flex;
+    gap: 8px;
+}
+
+.dot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+
+    &::before{
+        content: '';
+        display: block;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background-color: #6C7275;
+    }
+
+    &--active{
+        border: 1px solid #141718;
+        &::before{
+            background-color: #141718;           
+        }
+    }
+}

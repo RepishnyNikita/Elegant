@@ -1,0 +1,81 @@
+.newsletter{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    
+
+    height: 360px;
+    background-color: #E2E4E3;
+    background-image: url(./../img/newsletter/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mediaBg {
+        background-image: url(./../img/newsletter/bg@2x.jpg);
+    }
+
+    @include tablet {
+        background-image: none;
+    }
+
+    @include mobile {
+        height: auto;
+        padding: 95px 0;
+    }
+}
+
+.newsletter__content {
+    flex-grow: 1;
+    max-width: 552px;
+    text-align: center;
+    padding: 0 var(--container-padding);
+}
+
+.newsletter__title {
+    margin-bottom: 8px;
+    font-size: 28px !important;
+}
+
+.newsletter__desk {
+    font-size: 18px;
+    line-height: 1.666;
+    font-weight: 400px;
+    color: #121212;
+    margin-bottom: 32px;
+
+    @include mobile {
+        font-size: 14px;
+    }
+}
+
+.newsletter__form {
+    padding-bottom: 12px;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid rgba(108, 114, 117, 0.507);
+    width: 488px;
+
+    @include mobile {
+        width: 100%;   
+    }
+}
+
+.newsletter__form-input {
+    flex-grow: 1;
+    color: #121212;
+
+    &::placeholder{
+        color: #6C7275;
+    }
+
+}
+
+.newsletter__form-sunmit {
+    color: #6C7275;
+    transition: .2s ease-in;
+
+    &:hover{
+        color: #121212;
+    }
+}

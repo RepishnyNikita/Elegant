@@ -1,0 +1,100 @@
+.hero{
+    height: 820px;
+    background-color: #ffc95c;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./../img/hero/bg.jpg);
+    
+
+    @include mediaBg{
+        background-image: url(./../img/hero/bg@2x.jpg);
+    }
+
+    @include tablet {
+        height: 500px;
+    }
+
+    @include mobile {
+        height: auto;
+        padding-bottom: 388px;
+        background-image: url(./../img/hero/bg-mobile.jpg);
+
+        @include mediaBg{
+            background-image: url(./../img/hero/bg-mobile@2x.jpg);
+        }
+    }
+}
+
+.hero__container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+    padding-left: calc(
+        (100% - var(--container-width)) / 2 + (var(--container-width) / 2)
+    );
+
+    padding-right: calc(
+        (100% - var(--container-width)) / 2 
+    );
+
+    @include tablet{
+        padding-right:var(--container-padding)
+    }
+
+    @include mobile {
+        padding: 40px var(--container-padding) ;
+        text-align: center;
+        height: auto;
+        justify-content: center;
+
+        margin: 0 auto;
+        max-width: 375px;
+    }
+}
+
+.hero__content{
+    
+}
+
+
+.hero__title {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 105%;
+    letter-spacing: -3px;
+    font-family: var(--font-accent);
+    color: #000;
+    text-wrap: balance;
+    
+    span{
+        color: #377DFF;
+    }
+
+    @include tablet{
+        font-size: 60px;
+    }
+    @include mobile{
+        font-size: 40px;
+    }
+}
+
+.hero__desc {
+    margin-bottom: 28px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: #121212;
+
+    @include mobile{
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+
+
+
+
